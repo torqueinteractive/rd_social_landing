@@ -97,12 +97,12 @@
           <!-- Select your country -->
           <select id="country-selector">
             <option selected disabled>-- Country Select --</option>
-            <option>US</option>
-            <option>Canada</option>
+            <option id="us">United States</option>
+            <option id="canada">Canada</option>
           </select>
           <!-- Select your country end-->
 
-          <div id="country_US" class="toggle in-active">
+          <div id="country_us" class="toggle in-active">
             <!-- Begin MailChimp Signup Form -->
             <div id="mc_embed_signup">
               <form action="//ridgidpower.us9.list-manage.com/subscribe/post?u=0db2c89ea8f9ac09d86a08807&amp;id=82e38e0d75" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -116,7 +116,7 @@
             <!--End mc_embed_signup-->
           </div>
 
-          <div id="country_Canada" class="toggle in-active">
+          <div id="country_canada" class="toggle in-active">
             <!-- Begin Canada MailChimp Signup Form -->
             <div id="mc_embed_signup">
               <form action="//ttigroupna.us9.list-manage.com/subscribe/post?u=0db2c89ea8f9ac09d86a08807&amp;id=bc63549476" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -147,7 +147,7 @@
       var str = "";
 
       $( "select option:selected" ).each(function() {
-        str += $( this ).text();
+        str += $( this ).attr( "id" );
         $( "#country_" + str ).siblings(".toggle").removeClass('active').addClass('in-active')
         $( "#country_" + str ).addClass('active').removeClass('in-active');
       });
