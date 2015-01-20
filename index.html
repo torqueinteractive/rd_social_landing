@@ -7,90 +7,185 @@
 <!--<![endif]-->
 
 <head>
-
-    <!-- Basic Page Needs
+  <!-- Basic Page Needs
   ================================================== -->
-    <meta charset="utf-8">
-    <title>RIDGID :: Social</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <title>RIDGID :: Social</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Mobile Specific Metas
+  <!-- Mobile Specific Metas
   ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- CSS
+  <!-- CSS
   ================================================== -->
-    <link rel="stylesheet" href="stylesheets/base.css">
-    <link rel="stylesheet" href="stylesheets/skeleton.css">
-    <link rel="stylesheet" href="stylesheets/layout.css">
 
-    <!--[if lt IE 9]>
+  <link rel="stylesheet" href="stylesheets/base.css">
+  <link rel="stylesheet" href="stylesheets/skeleton.css">
+  <link rel="stylesheet" href="stylesheets/layout.css">
+
+
+  <!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-    <!-- Favicons
+  <!-- Favicons
 	================================================== -->
-    <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <style type="text/css">
+    .in-active {
+      display: none;
+    }
+  </style>
 
 </head>
 
 <body>
 
-    <header>
-        <div class="container logo"></div>
-    </header>
+  <header>
+    <div class="container logo"></div>
+  </header>
 
-        <div class="full-width follow-us">
-            <img src="images/follow-us.png" alt="Follow Us On Your Favorite Social Networks">
-        </div>
+  <div class="full-width follow-us">
+    <img src="images/follow-us.png" alt="Follow Us On Your Favorite Social Networks">
+  </div>
 
-        <div class="full-width blur-bg">
-        	<div class="container">
-	        	<div class="sixteen columns">
-		        	<ul>
-		        		<li>
-							<a href="#">
-								<img src="images/facebook-icon.png" alt="Facebook">
-							</a>
-		        		</li>
-		        		<li>
-							<a href="#">
-								<img src="images/twitter-icon.png" alt="Twitter">
-							</a>
-		        		</li>
-		        		<li>
-							<a href="#">
-								<img src="images/instagram-icon.png" alt="Instagram">
-							</a>
-		        		</li>
-		        		<li>
-							<a href="#">
-								<img src="images/youtube-icon.png" alt="YouTube">
-							</a>
-		        		</li>
-		        		<li>
-							<a href="#">
-								<img src="images/gplus-icon.png" alt="Google+">
-							</a>
-		        		</li>
-		        	</ul>
-	        	</div>
-        	</div>
-            <div class="container">
-                <div class="eight columns">
-                        <img class="signup-img" src="images/email-signup.png" alt="Canada Email Sign-Up">
-                </div>
-                <div class="eight columns">
-                        <iframe height="80" width="325" src="http://ridgidmail.com/ridgid_email"></iframe>
-                </div>
-            </div>
-
-        </div>
-
-	<div class="tools-bg">
+  <div class="full-width blur-bg">
+    <div class="container">
+      <div class="sixteen columns">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/ridgidpowertools">
+              <img src="images/facebook-icon.png" alt="Facebook">
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/RIDGIDPower">
+              <img src="images/twitter-icon.png" alt="Twitter">
+            </a>
+          </li>
+          <li>
+            <a href="http://instagram.com/ridgidpowertools">
+              <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/playlist?list=PLC301FDF0FB78B8BD">
+              <img src="images/youtube-icon.png" alt="YouTube">
+            </a>
+          </li>
+          <li>
+            <a href="https://plus.google.com/117986769718653875331/posts">
+              <img src="images/gplus-icon.png" alt="Google+">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+    <div class="container border">
+
+        <div class="eight columns">
+          <img class="email-signup" src="images/email-signup.png" alt="Email Signup">
+        </div>
+        <div class="seven columns">
+
+          <em>Select Your Country</em>
+          <!-- Select your country -->
+          <select id="country-selector">
+            <option selected disabled>-- Country Select --</option>
+            <option>US</option>
+            <option>Canada</option>
+          </select>
+          <!-- Select your country end-->
+
+          <div id="country_US" class="toggle in-active">
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+              <form action="//ridgidpower.us9.list-manage.com/subscribe/post?u=0db2c89ea8f9ac09d86a08807&amp;id=82e38e0d75" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_0db2c89ea8f9ac09d86a08807_82e38e0d75" tabindex="-1" value=""></div>
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </div>
+              </form>
+            </div>
+            <!--End mc_embed_signup-->
+          </div>
+
+          <div id="country_Canada" class="toggle in-active">
+            <!-- Begin Canada MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+              <form action="//ttigroupna.us9.list-manage.com/subscribe/post?u=0db2c89ea8f9ac09d86a08807&amp;id=bc63549476" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
+                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_0db2c89ea8f9ac09d86a08807_bc63549476" tabindex="-1" value=""></div>
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </div>
+              </form>
+            </div>
+            <!--End mc_embed_signup-->
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+  <div class="tools-bg"></div>
+
+
+  <script>
+  $(document).ready(function () {
+    loadFunction();
+
+
+    // toggling classes
+    $( "#country-selector" ).change(function () {
+      var str = "";
+
+      $( "select option:selected" ).each(function() {
+        str += $( this ).text();
+        $( "#country_" + str ).siblings(".toggle").removeClass('active').addClass('in-active')
+        $( "#country_" + str ).addClass('active').removeClass('in-active');
+      });
+
+      in_active();
+      active();
+    });
+
+    // On load add these classes then remove in-active ids
+    function loadFunction(){
+      $( ".toggle" ).each(function (){
+        $( this ).find( "#mc_embed_signup" ).attr( "class", "signup-change" );
+        $( this ).find( "#mc_embed_signup_scroll" ).attr( "class", "signup-scroll" );
+      });
+
+      in_active();
+    }
+
+    // ids removed when in-active
+    function in_active(){
+      $( ".in-active" ).find("div, form, input").removeAttr( "id" );
+    }
+
+    // ids added back when active
+    function active(){
+      $( ".active" ).each(function (){
+        $( this ).find( ".email" ).attr( "id", "mce-EMAIL" );
+        $( this ).find( ".button" ).attr( "id", "mc-embedded-subscribe" );
+        $( this ).find( ".signup-change" ).attr( "id", "mc_embed_signup" );
+        $( this ).find( ".validate" ).attr( "id", "mc-embedded-subscribe-form" );
+        $( this ).find( ".signup-scroll" ).attr( "id", "mc_embed_signup_scroll" );
+      });
+    }
+  });
+  </script>
 
 </body>
+
+
 
 </html>

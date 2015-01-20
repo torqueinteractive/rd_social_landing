@@ -1,19 +1,11 @@
 /* Table of Content
 ==================================================
 	#Page Styles
-	#SVG Styles
 	#Media Queries
-
+	#Mailchimp List Style
 
 /* #Page Styles
 ================================================== */
-body {
-	background-color: #282828;
-}
-img {
-	display: block;
-	margin: 0 auto;
-}
 header {
 	background: url(../images/header-bg.jpg);
 	height: 143px;
@@ -29,11 +21,36 @@ header {
 }
 .blur-bg {
 	background: url(../images/blur-bg.jpg) no-repeat top center;
-	height: 400px;
+	height: 490px;
 	-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
 }
+.follow-us {
+	background-color: #f5822b;
+	padding: 50px 0;
+}
+.follow-us img {
+	max-width: 665px;
+	width: 80%;
+	height: auto;
+}
+.border {
+	border: 3px solid #f3f3f3;
+	background-color: rgba(230,230,230,0.7);
+	padding: 18px 0px;
+	border-radius: 10px;
+}
+.eight {
+	border-right: 3px solid #f3f3f3;
+	padding: 20px 0px;
+}
+.email-signup {
+	width: 80%;
+	max-width: 309px;
+}
+
+/* Social Icons */
 ul {
-	margin: 80px 0 50px;
+	margin: 50px 0 30px;
 	text-align:center;
 }
 ul li {
@@ -46,36 +63,54 @@ ul li a img {
 	height: auto;
 	-webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s;
 }
-ul li a img:hover {
+ul li a img:hover, ul li a img:focus {
 	-webkit-transform: scale(1.025, 1.025); -moz-transform: scale(1.025, 1.025); -ms-transform: scale(1.025, 1.025); -o-transform: scale(1.025, 1.025); transform: scale(1.025, 1.025);
 	-webkit-transition-duration: 0.3s; -moz-transition-duration: 0.3s; -o-transition-duration: 0.3s; transition-duration: 0.3s;
+}
+
+
+/* Helpers & Overrides */
+body {
+	background-color: #282828;
+}
+hr {
+	width: 50%; max-width: 500px;
+	height: 18px;
+	margin: 0 auto;
+	border-width: 3px 0 0;
+	border-color: #ffffff;
+}
+img {
+	display: block;
+	margin: 0 auto;
 }
 .full-width {
 	width: 100%;
 }
-.follow-us {
-	background-color: #f5822b;
-	padding: 50px 0;
-}
-.follow-us img {
-	max-width: 665px;
-	width: 80%;
-	height: auto;
-}
-iframe {
-	display: block;
-}
-.email-container {
-	width:620px;
-	margin:0 auto;
-}
-.signup-img {
-	float: right;
-	margin-top: 11px;
-}
 
 
+/* Mailchimp Signup Form */
 
+#mc_embed_signup form {
+		margin: 0px;
+}
+#mc_embed_signup input.email {
+	border: none;
+	border-radius: 4px;
+	height: 36px;
+}
+#mc_embed_signup input.button {
+	border: none;
+	color: white;
+	text-shadow: none;
+	font-size: 16px;
+	padding: 9px 24px;
+	background: #f5822b;
+	border-radius: 4px;
+}
+#mc_embed_signup input.button:hover {
+	background: #ff9748;
+}
 
 
 
@@ -86,9 +121,6 @@ iframe {
 	@media only screen and (max-width: 959px) {
 		.logo {
 			background: url(../images/logo.large.png) no-repeat -100px 0;
-		}
-		iframe {
-			margin: 0 auto;
 		}
 	}
 
@@ -101,7 +133,7 @@ iframe {
 			padding: 0 10px;
 		}
 		.blur-bg {
-			height:490px;
+			height:580px;
 		}
 	}
 
@@ -111,21 +143,23 @@ iframe {
 			background: url(../images/logo.medium.png) no-repeat 120px 0;
 		}
 		.blur-bg {
-			height:600px;
+			height:660px;
 		}
 		.email-container {
 			width: auto;
 		}
-		.signup-img {
-			float:none;
-		}
-		.e2ma_signup_form.e2ma_signup_form {
-			margin: 10px auto 0 auto;
-			display: block;
-			width: 320px;
-		}
 		ul {
 			margin: 30px 0;
+		}
+		.eight {
+			border-right: none;
+			margin-bottom:12px;
+		}
+		.seven {
+			text-align: center;
+		}
+		#mc_embed_signup input.email, select {
+			margin: 0 auto 20px;
 		}
 
 
@@ -138,6 +172,9 @@ iframe {
 			width: 60%;
 			max-width: 152px;
 		}
+		.blur-bg {
+			height: 830px;
+		}
 	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -146,13 +183,13 @@ iframe {
 			background: url(../images/logo.small.png) no-repeat 20px 0;
 		}
 		.blur-bg {
-			height:660px;
+			height: 920px;
+		}
+		.tools-bg{
+			height:300px;
 		}
 		ul li a img {
 			width: 50%;
 			max-width: 152px;
-		}
-		.tools-bg {
-			height: 200px;
 		}
 	}
